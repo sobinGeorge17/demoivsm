@@ -1,0 +1,18 @@
+<div class="align-bottom">
+    <div class="d-flex align-bottom">
+        <img src="assets/images/download (1).jpeg" width="30px">
+        <span>Messages</span>
+    </div>
+
+    <div class="message-scroller" #tasks_parent_area [ngStyle]="{'display':intialLoader ? 'none' : 'block'}">
+        <div *ngFor="let message of messages; let i = index">
+            {{messages}}
+        </div>
+        <div *ngIf="messages?.length  === 0" class="text-center">
+            no messages
+        </div>
+
+    </div>
+
+</div>
+
