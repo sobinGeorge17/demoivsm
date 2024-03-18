@@ -1,0 +1,11 @@
+.left{
+    width: 200px;
+}
+.content{
+    background-color: bisque;
+}
+.right{
+    margin-left: 400px;
+    width: 200px;
+ 
+}

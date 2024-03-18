@@ -1,0 +1,23 @@
+<div class="container-fluid dashboard-parent">
+    <div class="row">
+        <div class="content-area header-area">
+            <div class="header">
+               <!-- <app-header [stationName]="'dc1Station'"></app-header>  -->
+            </div>
+        </div>
+    </div>   
+</div>
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <app-left-bar-menu></app-left-bar-menu>
+        </div>
+        <div class="col-md-6">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-3">
+            <app-right-side-bar></app-right-side-bar>
+        </div>
+
+    </div>
+</div>

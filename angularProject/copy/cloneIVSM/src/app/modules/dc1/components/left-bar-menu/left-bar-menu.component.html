@@ -1,0 +1,37 @@
+<div class="left-parent">
+    <div class="menu-parent box-view">
+        <div class="menu-item">
+            <img src="assets/images/download (1).jpeg" width="30px" height="40px">
+            <a [routerLink]="'/dc1'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <span>Messages</span>
+            </a>
+        </div>
+
+        <ng-container *ngIf="userRole != 'pharmaDimensions' || fullPermission ">
+            <div class="menu-item">
+                <img src="assets/images/download.png" width="30px" height="40px">
+                <a [routerLink]="'/dc1/weights'" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >
+                    <span>Weight</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <img src="assets/images/images.png" width="30px" height="40px">
+                <a [routerLink]="'/dc1/dimensions'" routerLinkActive="active">
+                    <span>Dimensions</span>
+                </a>
+            </div>
+        </ng-container>
+
+        <div class="menu-item" *ngIf="userRole != 'DC1' || fullPermission ">
+            <img src="assets/images/download (1).jpeg" width="30px" height="40px">
+            <a [routerLink]="'/dc1/pharma'" routerLinkActive="active">
+                <span>pharmaDimensions</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="my-task-parent box-view">
+        <app-products></app-products>
+    </div>
+
+</div>
